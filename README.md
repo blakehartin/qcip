@@ -1,0 +1,2 @@
+# qcip
+QuantumCoin Improvement Proposals
