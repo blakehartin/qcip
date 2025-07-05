@@ -1,2 +1,2 @@
-# qcip
-QuantumCoin Improvement Proposals
+# QCIP
+QuantumCoin Improvement Proposals, submitted by QuantumCoin community members.
