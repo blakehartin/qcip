@@ -4,23 +4,23 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>qcip-11 Pluggable Source of Randomness | QuantumCoin Improvement Proposals</title>
-    <meta property="og:title" content="qcip-11 Pluggable Source of Randomness | QuantumCoin Improvement Proposals">
+    <title>qcip-12 Notarization Infrastructure | QuantumCoin Improvement Proposals</title>
+    <meta property="og:title" content="qcip-12 Notarization Infrastructure | QuantumCoin Improvement Proposals">
     <meta name="description" content="QuantumCoin Improvement Proposals (QCIPs) propose standards for the QuantumCoin Platform, including core protocol specifications, consensus, and contract standards.">
     <meta property="og:description" content="QuantumCoin Improvement Proposals (QCIPs) propose standards for the QuantumCoin Platform, including core protocol specifications, client APIs, and contract standards.">
     <meta name="twitter:description" content="QuantumCoin Improvement Proposals (QCIPs) propose standards for the QuantumCoin Platform, including core protocol specifications, client APIs, and contract standards.">
     <meta name="generator" content="Mr.Hyde">
     <meta property="og:locale" content="en_US">
-    <link rel="canonical" href="https://qcip.quantumcoin.org/qcip/qcip-11.html">
-    <meta property="og:url" content="https://qcip.quantumcoin.org/qcip/qcip-11.html">
+    <link rel="canonical" href="https://qcip.quantumcoin.org/qcip/qcip-12.html">
+    <meta property="og:url" content="https://qcip.quantumcoin.org/qcip/qcip-12.html">
     <meta property="og:site_name" content="QuantumCoin Improvement Proposals">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@">
     <script type="application/ld+json">
         {
             "@type": "WebSite",
-            "url": "https://qcip.quantumcoin.org/qcip/qcip-11.html",
-            "name": "qcip-11 Pluggable Source of Randomness - QuantumCoin Improvement Proposals",
+            "url": "https://qcip.quantumcoin.org/qcip/qcip-12.html",
+            "name": "qcip-12 Notarization Infrastructure - QuantumCoin Improvement Proposals",
             "description": "QuantumCoin Improvement Proposals (QCIPs) propose standards for the QuantumCoin platform, including core protocol specifications, client APIs, and contract standards.",
             "@context": "https://schema.org"
         }
@@ -494,10 +494,10 @@
     <div class="wrapper">
         <div class="home">
             <span class="h5">
-                <a class="badge text-light bg-primary" data-bs-toggle="tooltip" data-bs-title="Cryptography" href="https://qcip.quantumcoin.org/cryptography.html">Cryptography</a>
+                <a class="badge text-light bg-primary" data-bs-toggle="tooltip" data-bs-title="Cryptography" href="https://qcip.quantumcoin.org/platform.html">platform</a>
             </span>
             <h1 class="page-heading">
-                qcip-11: Pluggable Source of Randomness
+                qcip-12: Notarization Infrastructure
                 <a href="" class="no-underline">
                     <svg role="img" aria-label="Discuss" class="inline-svg" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 16 16">
                         <use xlink:href="#bi-chat"></use>
@@ -522,7 +522,7 @@
                 </tr>
                 <tr>
                     <th scope="row">Proposed On</th>
-                    <td>30-Jun-2025</td>
+                    <td>02-Jul-2025</td>
                 </tr>
                 </tbody>
             </table>
@@ -538,18 +538,55 @@
                 <a href="#abstract" class="anchor-link"></a> Abstract
             </h3>
             <p>
-                Update QuantumCoin to support a pluggable randomness source for cryptographic operations.</p>
+                Enable expansion into notarization infrastructure.</p>
             <h3 id="motivation">
                 <a href="#motivation" class="anchor-link"></a> Motivation
             </h3>
             <p>
-                With the emergence of CURBy (NIST)'s quantum randomness verification technology and Zero-Level Magic Distillation (ZLMD)-based error correction, a new level of security is now required even for post-quantum cryptographic systems.
-                In particular, CURBy can provide 'verifiable truth' to signature seeds, and ZLMD signals a turning point by reducing error rates to levels that could potentially break PQC.
-                These technologies are no longer optional—they are essential for survival. A pluggable randomness source will allow supporting options such as CURBy.
+                Q is, at its core, a chain that proves digital truth.
+                The PQC signature structure, decentralized consensus, and policy-based algorithm switching structure that Q currently possesses form a foundation that
+                goes beyond a simple dApp chain and enables expansion into notarization infrastructure.
+            </p>
+            <p>
+                The notarization market is a highly stable B2B/B2C demand sector worth hundreds of billions of dollars annually.
+                If Q enters this market, it can secure real-world utility based on survival, rather than short-term speculative demand.
+                Q already structurally satisfies the core requirements of notarization:
+            </p>
+            <p>
+                a) Tamper-proof signatures based on PQC<br/>
+                b) Timestamp assurance through blockchain<br/>
+                c) Decentralized structure and policy-based security transition capability<br/>
+            </p>
+
+                <p>However, to become a true notarization platform, several components need to be added:</p>
+
+            <p>
+                1) Structured Notarization Layer (SNL):<br/>
+                Standardize the message format for notarization (document hash, signer role, intent, etc.) and record it on-chain.
+            </p>
+            <p>
+                2) Quantum TimeProof Oracle (QTO):<br/>
+                Integrate with systems such as NIST CURBy to strengthen legal validity through an absolute timestamp proof structure.
+            </p>
+            <p>
+                3) Multi-PQC Signature Redundancy Layer (SRL):<br/>
+                Introduce a redundancy structure, such as Dilithium + Falcon, to prepare for future quantum hacking threats.
+            </p>
+            <p>
+                4) Notarized Data Verification API (NDV):<br/>
+                Provide an interface that allows external systems to verify document authenticity.
+            </p>
+            <p>
+                5) These four components can be implemented at the smart contract and API levels, and they perfectly align with Q’s core philosophy.
+                Q dominating the notarization market would mean that the legal standard for digital truth is established on Q, and this would represent not just market demand, but the realization of Q’s very identity.
+            </p>
+            <p>
+                This is not about giving Q over to legal institutions, but about ensuring that digital truth — in a post-quantum world — is something even the law can no longer ignore.
+                This proposal aims to reinforce decentralization, not weaken it — by allowing legal systems to integrate as users, not owners.
             </p>
             <h2>Citation</h2>
             <p>Please cite this document as:</p>
-            <p>Eun (via Discord) <a href="https://qcip.quantumcoin.org/qcip/qcip-11.html">"qcip-11: Pluggable Source of Randomness"</a>, <em>QuantumCoin Improvement Proposals</em>, 30, Jun 2025</p>
+            <p>Eun (via Discord) <a href="https://qcip.quantumcoin.org/qcip/qcip-12.html">"qcip-12: Notarization Infrastructure"</a>, <em>QuantumCoin Improvement Proposals</em>, 02, Jul 2025</p>
         </div>
     </div>
 </main><footer class="site-footer h-card">
